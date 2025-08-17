@@ -68,31 +68,36 @@ export const services = [
 
 export const projects = [
   {
-    img: "https://api.builder.io/api/v1/image/assets/TEMP/523ea9817670db3399a02175828886fe8af8e96e?width=964",
+    logo: "/logos/techcombank.png",
+    background: "/project-backgrounds/techcombank-bg.png",
     title: "Techcombank FinWise Edu cho học sinh",
     description: "Chương trình dành cho khách hàng Private và Priority của Techcombank, hướng tới giáo dục cho con của họ về tài chính cá nhân.",
     link: "#"
   },
   {
-    img: "https://api.builder.io/api/v1/image/assets/TEMP/1a6e178f9e15e2819be87fd488b878f0371b6db2?width=964",
+    logo: "/logos/shinhan_finance.png",
+    background: "/project-backgrounds/shinhan-finance-bg.png",
     title: "Đào tạo về Thẻ tín dụng cho đội ngũ bán hàng",
     description: "Chương trình đào tạo cho đội ngũ bán hàng của Shinhan Finance về thẻ tín dụng mới để tăng khả năng bán chéo của họ.",
     link: "#"
   },
   {
-    img: "https://api.builder.io/api/v1/image/assets/TEMP/a3f39cf30e82a754c90f69cb0695aca30d12669d?width=964",
+    logo: "/logos/momo.png",
+    background: "/project-backgrounds/momo-bg.png",
     title: "Giáo dục tài chính cá nhân cho người dùng MoMo",
     description: "Chương trình giáo dục tài chính thiết kế cho người dùng trong độ tuổi 18-25 của MoMo nhằm nâng cao khả năng tài chính của họ.",
     link: "#"
   },
   {
-    img: "https://api.builder.io/api/v1/image/assets/TEMP/90d37df05e5b9fac263a9cfec48f7ab648a84a64?width=964",
+    logo: "/logos/gimo.png",
+    background: "/project-backgrounds/gimo-bg.png",
     title: "Nâng cao hiểu biết tài chính cho người lao động",
     description: "Chương trình trang bị cho người lao động đang sử dụng GIMO một nền tảng kiến thức tài chính vững chắc để trở thành người dùng trách nhiệm và thông...",
     link: "#"
   },
   {
-    img: "https://api.builder.io/api/v1/image/assets/TEMP/ecc92e585c862ee4bc5e2c7efb5cfd7973c7cf0c?width=964",
+    logo: "/logos/fizen.png",
+    background: "/project-backgrounds/fizen-bg.png",
     title: "Thư viện giáo dục cho người dùng Fizen",
     description: "Thư viện cung cấp kiến thức về tiền điện tử cũng như giới thiệu các tính năng quan trọng trong ứng dụng của Fizen để người dùng hiểu rõ.",
     link: "#"

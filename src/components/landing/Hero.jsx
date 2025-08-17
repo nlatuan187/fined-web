@@ -13,22 +13,20 @@ const Hero = () => (
               <h1 className="dark-text">giáo dục tài chính</h1>
             </div>
             <div className="hero-description">
-              Giúp các <span className="highlight-text">tổ chức tài chính</span> xây dựng niềm tin, tăng khả năng tiếp cận sản phẩm và gắn kết với khách hàng thông qua giáo dục tài chính.
+              Giúp các tổ chức tài chính xây dựng niềm tin, tăng khả năng tiếp cận sản phẩm và gắn kết với khách hàng thông qua giáo dục tài chính.
             </div>
-            <div className="hero-cta">
-              <span className="cta-text">Liên hệ</span>
-              <div className="cta-arrow">
-                <svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2.2002 0C2.75936 2.44418e-08 3.31009 0.201683 3.72754 0.582031L11.3271 7.50781C11.7471 7.8907 12 8.42887 12 9.00781C11.9999 9.5866 11.747 10.124 11.3271 10.5068L3.72168 17.4375L3.7168 17.4424C3.29778 17.8112 2.75124 18.0044 2.19824 18C1.64529 17.9956 1.10222 17.7941 0.689453 17.418C0.274176 17.0395 0.0221096 16.5097 0.0166016 15.9375C0.0111444 15.3651 0.253131 14.8303 0.662109 14.4443L0.667969 14.4395L6.28027 9.32422C6.46678 9.15423 6.46678 8.86041 6.28027 8.69043L0.672852 3.58008C0.253024 3.1972 -2.53011e-08 2.65988 0 2.08105C5.23504e-05 1.50226 0.253017 0.964873 0.672852 0.582031C1.09029 0.201694 1.64105 1.06247e-05 2.2002 0Z" fill="white"></path>
-                </svg>
-              </div>
-            </div>
+            <a href="#contact-section" className="hero-cta">
+              <div className="cta-text">Liên hệ</div>
+              <svg className="cta-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
           </div>
         </div>
         <div className="hero-right">
           <div className="hero-image-bg"></div>
           <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/f0fd3ed4646573d7e0354da0c39fd0e3e8a04901?width=676"
+            src="/images/hero-phone.png"
             alt="Hero Phone"
             className="hero-phone"
           />
@@ -130,17 +128,14 @@ const Hero = () => (
         font-weight: 700;
       }
       .hero-cta {
-        padding: 0 36px;
+        padding: 16px 24px;
         display: flex;
-        height: 68px;
-        justify-content: center;
         align-items: center;
-        gap: 12px;
-        border-radius: 12px;
-        box-shadow: -8px 8px 28px 0 rgba(0, 0, 0, 0.06);
-        width: 166px;
+        gap: 8px;
+        border-radius: 8px;
+        background-color: #00ACB8;
         cursor: pointer;
-        background-color: #49c2c9;
+        text-decoration: none;
       }
       .cta-text {
         color: #FFF;
@@ -149,9 +144,8 @@ const Hero = () => (
         line-height: 28px;
       }
       .cta-arrow {
-        width: 12px;
-        height: 18px;
-        fill: #FFF;
+        width: 24px;
+        height: 24px;
       }
       .hero-right {
         width: 648px;
@@ -171,17 +165,17 @@ const Hero = () => (
         z-index: 0;
       }
       .hero-phone {
-        width: 338px;
-        height: 422px;
+        width: 400px; /* Increased size */
+        height: auto;
         position: absolute;
-        left: 184px;
-        top: 0px;
+        left: 150px; /* Adjusted position */
+        top: -40px; /* Adjusted position */
         z-index: 2;
       }
       .info-card {
         position: absolute;
-        left: 388px;
-        top: 184px;
+        left: 420px; /* Adjusted position */
+        top: 150px; /* Adjusted position */
         width: 260px;
         padding: 20px;
         border-radius: 12px;
@@ -249,6 +243,7 @@ const Hero = () => (
         }
         .hero-left {
           width: 100%;
+          height: auto; /* Allow height to adjust */
         }
         .hero-title-section h1 {
           font-size: 48px;
@@ -258,7 +253,24 @@ const Hero = () => (
         }
         .hero-right {
           width: 100%;
-          height: 300px;
+          height: 450px; /* Adjusted height */
+        }
+        .hero-phone {
+          width: 280px; /* Mobile size */
+          left: 50%;
+          transform: translateX(-50%);
+          top: 0;
+        }
+        .info-card {
+            left: auto;
+            right: 0px;
+            top: 120px;
+            width: 220px;
+        }
+        .lesson-card {
+            left: 0;
+            top: auto;
+            bottom: 20px;
         }
       }
       @media (max-width: 640px) {

@@ -7,12 +7,20 @@ const Footer = () => (
       <div className="footer-brand">
         <div className="footer-brand-info">
           <img src="https://api.builder.io/api/v1/image/assets/TEMP/10c07711dc1b993b8e8f4c6fb2bafabceccf2340?width=272" alt="Finful Logo" className="footer-logo" />
-          <div className="footer-copyright">© 2025 Finful, Inc. All rights reserved.</div>
+          <div className="footer-copyright">© 2025 Finful, Inc.</div>
         </div>
         <div className="footer-contact">
           <div className="social-links">
-            <img src="https://api.builder.io/api/v1/image/assets/TEMP/678e1dc8e4ad41156580afdd905d48ba435d55e3?width=56" alt="Facebook" className="social-icon" />
-            <img src="https://api.builder.io/api/v1/image/assets/TEMP/6e51634ecdcbbfc6b73522f73c4c1690f919e666?width=56" alt="LinkedIn" className="social-icon" />
+            <a href="https://www.facebook.com/finful.co" target="_blank" rel="noopener noreferrer">
+              <svg className="social-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.6667 4.66666H16.3333C14.471 4.66666 12.8333 6.30434 12.8333 8.16666V10.5H10.5V14H12.8333V23.3333H16.3333V14H18.6667L19.8333 10.5H16.3333V8.16666C16.3333 7.85472 16.5914 7.59666 16.9033 7.59666H18.6667V4.66666Z" stroke="white" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/finful/" target="_blank" rel="noopener noreferrer">
+              <svg className="social-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.99996 11.6667H10.5V21H6.99996V11.6667ZM8.74996 7C9.72164 7 10.5 7.77836 10.5 8.75C10.5 9.72164 9.72164 10.5 8.74996 10.5C7.77832 10.5 6.99996 9.72164 6.99996 8.75C6.99996 7.77836 7.77832 7 8.74996 7ZM17.5 11.6667H20.4166V13.065C20.8933 12.2384 22.0266 11.375 23.5516 11.375C26.8716 11.375 27.4166 13.5117 27.4166 16.28V21H23.9166V16.9167C23.9166 15.75 23.8866 14.2334 22.3816 14.2334C20.8766 14.2334 20.6266 15.4717 20.6266 16.8217V21H17.1266L17.5 11.6667Z" fill="white" fill-opacity="0.7"/>
+              </svg>
+            </a>
           </div>
           <div className="footer-email">hello@finful.co</div>
         </div>
@@ -100,6 +108,11 @@ const Footer = () => (
       .social-icon {
         width: 28px;
         height: 28px;
+        opacity: 0.7;
+        transition: opacity 0.2s ease-in-out;
+      }
+      .social-icon:hover {
+        opacity: 1;
       }
       .footer-email {
         color: #FFF;

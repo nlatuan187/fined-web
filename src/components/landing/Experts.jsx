@@ -53,39 +53,39 @@ const Experts = () => (
       }
       .expert-card {
         width: 406px;
-        height: 489px;
+        padding-bottom: 20px;
         position: relative;
       }
       .expert-card-bg {
         width: 406px;
-        height: 434px;
-        border-radius: 12px 12px 0 0;
+        height: 100%;
+        border-radius: 12px;
         border: 1px solid #7FD5DB;
         position: absolute;
         left: 0px;
         top: 55px;
         background-color: #ECF8F9;
+        z-index: -1;
       }
       .expert-image {
         width: auto;
         height: 306px;
-        position: absolute;
+        position: relative;
         left: 50%;
         transform: translateX(-50%);
         top: 0px;
+        display: block;
+        margin-bottom: 20px;
       }
       .expert-name-bg {
         padding: 10px;
         display: flex;
-        width: 406px;
-        height: 53px;
+        width: 100%;
         justify-content: center;
         align-items: center;
         gap: 10px;
-        position: absolute;
-        left: 0px;
-        top: 306px;
         background-color: #00ACB8;
+        margin-bottom: 20px;
       }
       .expert-name {
         color: #FFF;
@@ -94,20 +94,22 @@ const Experts = () => (
         font-weight: 600;
       }
       .expert-credentials {
-        width: 389px;
+        width: 100%;
+        padding: 0 15px;
         color: #333;
         font-size: 14px;
         font-weight: 500;
         line-height: 18px;
-        position: absolute;
-        left: 8px;
-        top: 376px;
       }
       @media (max-width: 991px) {
         .experts-section {
           flex-direction: column;
           align-items: center;
-          gap: 30px;
+          gap: 60px;
+        }
+        .expert-card {
+            width: 90%;
+            max-width: 406px;
         }
       }
     `}</style>

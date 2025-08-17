@@ -10,7 +10,9 @@ const Projects = () => (
     <div className="projects-section">
       {projects.map((project, index) => (
         <div key={index} className="project-card">
-          <img src={project.img} alt={project.title} className="project-image" />
+          <div className="project-image-container" style={{ backgroundImage: `url(${project.background})` }}>
+            <img src={project.logo} alt={`${project.title} logo`} className="project-logo" />
+          </div>
           <div className="project-content">
             <div className="project-title">{project.title}</div>
             <div className="project-description">{project.description}</div>
@@ -70,24 +72,50 @@ const Projects = () => (
         border: 1px solid #DDD;
         background-color: #FFF;
       }
-      .project-image {
+      .project-image-container {
         height: 209px;
         width: 100%;
-        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .project-image-container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 8px 8px 0 0;
+      }
+      .project-logo {
+        max-height: 80px;
+        max-width: 200px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        z-index: 1;
       }
       .project-content {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 3px;
+        gap: 8px; /* Increased gap */
         width: 100%;
+        padding: 0 10px; /* Add some horizontal padding */
       }
       .project-title {
-        height: 27px;
+        /* height: 27px; Removed fixed height */
         color: #333;
         font-size: 20px;
         font-weight: 600;
         width: 100%;
+        line-height: 1.3; /* Added line-height for better spacing */
       }
       .project-description {
         color: #333;
