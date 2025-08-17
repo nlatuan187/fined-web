@@ -251,6 +251,9 @@ const Hero = () => (
         .hero-text-container {
           width: 100%;
         }
+        .hero-description {
+          width: 100%; /* Ensure text wraps correctly */
+        }
         .hero-right {
           width: 100%;
           height: 450px; /* Adjusted height */
