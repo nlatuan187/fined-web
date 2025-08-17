@@ -22,7 +22,13 @@ const Footer = () => (
               </svg>
             </a>
           </div>
-          <div className="footer-email">hello@finful.co</div>
+          <a href="mailto:hello@finful.co" className="footer-email">
+            <svg className="social-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.83331 7H22.1666C23.2712 7 24.1666 7.89543 24.1666 9V19C24.1666 20.1046 23.2712 21 22.1666 21H5.83331C4.72874 21 3.83331 20.1046 3.83331 19V9C3.83331 7.89543 4.72874 7 5.83331 7Z" stroke="white" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M24.1667 9L14 15L3.83334 9" stroke="white" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>hello@finful.co</span>
+          </a>
         </div>
       </div>
       <div className="footer-links">
@@ -115,9 +121,18 @@ const Footer = () => (
         opacity: 1;
       }
       .footer-email {
+        display: flex;
+        align-items: center;
+        gap: 13px;
         color: #FFF;
         font-size: 15px;
         font-weight: 500;
+        text-decoration: none;
+        opacity: 0.7;
+        transition: opacity 0.2s ease-in-out;
+      }
+      .footer-email:hover {
+        opacity: 1;
       }
       .footer-links {
         display: flex;
