@@ -7,15 +7,11 @@ import Services from './landing/Services';
 import Projects from './landing/Projects';
 import Experts from './landing/Experts';
 import Contact from './landing/Contact';
-import Footer from './landing/Footer';
 
 function FinancialEducationWebsite() {
   return (
     <>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      />
+      {/* Header is now correctly placed inside Hero component */}
       <div className="main-container">
         <Hero />
         <TrustedPartners />
@@ -26,7 +22,6 @@ function FinancialEducationWebsite() {
         <Experts />
         <div className="divider"></div>
         <Contact />
-        <Footer />
         </div>
 
       <style jsx global>{`
@@ -38,9 +33,7 @@ function FinancialEducationWebsite() {
         html {
           scroll-behavior: smooth;
         }
-        body {
-          font-family: 'Inter', sans-serif;
-        }
+        /* body font-family is now in Layout.jsx */
 
         .main-container {
           width: 100%;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { projects } from './data';
 
 const Projects = () => (
@@ -8,20 +9,29 @@ const Projects = () => (
       <div className="badge-text">Các dự án của chúng tôi</div>
     </div>
     <div className="projects-section">
-      {projects.map((project, index) => (
-        <div key={index} className="project-card">
-          <div className="project-image-container" style={{ backgroundImage: `url(${project.background})` }}>
-            <img src={project.logo} alt={`${project.title} logo`} className="project-logo" />
+      {projects.map((project, index) => {
+        let projectLink = project.link;
+        if (project.title === "Techcombank FinWise Edu cho học sinh") {
+          projectLink = "/projects/techcombank";
+        } else if (project.title === "Đào tạo về Thẻ tín dụng cho đội ngũ bán hàng") {
+          projectLink = "/projects/shinhan-finance";
+        }
+
+        return (
+          <div key={index} className="project-card">
+            <div className="project-image-container" style={{ backgroundImage: `url(${project.background})` }}>
+              <img src={project.logo} alt={`${project.title} logo`} className="project-logo" />
+            </div>
+            <div className="project-content">
+              <div className="project-title">{project.title}</div>
+              <div className="project-description">{project.description}</div>
+            </div>
+            <Link to={projectLink} className="project-cta">
+              <div className="project-cta-text">Xem thêm &gt;</div>
+            </Link>
           </div>
-          <div className="project-content">
-            <div className="project-title">{project.title}</div>
-            <div className="project-description">{project.description}</div>
-          </div>
-          <a href={project.link} className="project-cta">
-            <div className="cta-text">Xem thêm &gt;</div>
-          </a>
-        </div>
-      ))}
+        );
+      })}
     </div>
     <div className="pagination">
       {[...Array(4)].map((_, index) => (
@@ -131,22 +141,22 @@ const Projects = () => (
         align-items: center;
         width: 163px;
         height: 35px;
-        border: 1px solid #DDD;
+        border: 1px solid #333; /* Set border to black */
         border-radius: 5px;
         text-decoration: none;
         transition: all 0.2s ease-in-out;
       }
       .project-cta:hover {
         background-color: #f0f0f0;
-        border-color: #ccc;
+        border-color: #000;
       }
-      .cta-text {
-        color: #000;
+      .project-cta-text {
+        color: #333; /* Set text to black */
         text-align: center;
         font-size: 14px;
         font-weight: 500;
         line-height: 28px;
-        opacity: 0.8;
+        opacity: 1; /* Ensure full opacity */
       }
       .pagination {
         margin: 50px auto;

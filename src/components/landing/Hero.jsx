@@ -16,7 +16,7 @@ const Hero = () => (
               Giúp các tổ chức tài chính xây dựng niềm tin, tăng khả năng tiếp cận sản phẩm và gắn kết với khách hàng thông qua giáo dục tài chính.
             </div>
             <a href="#contact-section" className="hero-cta">
-              <div className="cta-text">Liên hệ</div>
+              <div className="hero-cta-text">Liên hệ</div>
               <svg className="cta-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -137,7 +137,7 @@ const Hero = () => (
         cursor: pointer;
         text-decoration: none;
       }
-      .cta-text {
+      .hero-cta-text {
         color: #FFF;
         font-size: 20px;
         font-weight: 600;
