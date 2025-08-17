@@ -1,0 +1,161 @@
+import React from 'react';
+import { projects } from './data';
+
+const Projects = () => (
+  <>
+    <div className="projects-badge">
+      <img src="https://api.builder.io/api/v1/image/assets/TEMP/897f1dbb1436ef20781744e39f3fbd5869346839?width=32" alt="Star" className="badge-icon" />
+      <div className="badge-text">Các dự án của chúng tôi</div>
+    </div>
+    <div className="projects-section">
+      {projects.map((project, index) => (
+        <div key={index} className="project-card">
+          <img src={project.img} alt={project.title} className="project-image" />
+          <div className="project-content">
+            <div className="project-title">{project.title}</div>
+            <div className="project-description">{project.description}</div>
+          </div>
+          <a href={project.link} className="project-cta">
+            <div className="cta-text">Xem thêm &gt;</div>
+          </a>
+        </div>
+      ))}
+    </div>
+    <div className="pagination">
+      {[...Array(4)].map((_, index) => (
+        <div key={index} className="pagination-dot"></div>
+      ))}
+    </div>
+     <style jsx>{`
+      .projects-badge {
+        margin: 50px auto;
+        padding: 0;
+        display: flex;
+        width: 235px;
+        height: 37px;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        border-radius: 20px;
+        border: 1px solid #7FD5DB;
+        background-color: #ECF8F9;
+      }
+      .badge-icon {
+        width: 16px;
+        height: 16px;
+      }
+      .badge-text {
+        color: #333;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .projects-section {
+        padding: 0 60px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 42px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .project-card {
+        padding: 10px 10px 30px 10px;
+        display: flex;
+        width: 502px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        border-radius: 10px;
+        border: 1px solid #DDD;
+        background-color: #FFF;
+      }
+      .project-image {
+        height: 209px;
+        width: 100%;
+        object-fit: cover;
+      }
+      .project-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3px;
+        width: 100%;
+      }
+      .project-title {
+        height: 27px;
+        color: #333;
+        font-size: 20px;
+        font-weight: 600;
+        width: 100%;
+      }
+      .project-description {
+        color: #333;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        opacity: 0.8;
+        width: 100%;
+      }
+      .project-cta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 163px;
+        height: 35px;
+        border: 1px solid #DDD;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+      }
+      .project-cta:hover {
+        background-color: #f0f0f0;
+        border-color: #ccc;
+      }
+      .cta-text {
+        color: #000;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 28px;
+        opacity: 0.8;
+      }
+      .pagination {
+        margin: 50px auto;
+        padding: 12px;
+        display: flex;
+        width: 109px;
+        height: 36px;
+        align-items: flex-start;
+        gap: 12px;
+        border-radius: 15984px;
+        background-color: rgba(229, 246, 247, 0.20);
+      }
+      .pagination-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 15984px;
+        opacity: 0.2;
+        background-color: #00ACB8;
+      }
+       @media (max-width: 991px) {
+          .projects-section {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+          }
+        }
+        @media (max-width: 640px) {
+          .projects-section {
+            padding: 0 20px;
+          }
+          .project-card {
+            width: 100%;
+            max-width: 400px;
+          }
+        }
+    `}</style>
+  </>
+);
+
+export default Projects;
