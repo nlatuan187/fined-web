@@ -1,9 +1,9 @@
 export const partners = [
   { src: "/logos/techcombank.png", alt: "Techcombank" },
-  { src: "/logos/momo.png", alt: "MoMo" },
+  // { src: "/logos/momo.png", alt: "MoMo" },
   { src: "/logos/shinhan_finance.png", alt: "Shinhan Finance" },
   { src: "/logos/mastercard.png", alt: "Mastercard" },
-  { src: "/logos/gimo.png", alt: "Gimo" },
+  // { src: "/logos/gimo.png", alt: "Gimo" },
   { src: "/logos/vinuniversity.png", alt: "VinUniversity" },
   { src: "/logos/fizen.png", alt: "Fizen" },
 ];
@@ -81,20 +81,20 @@ export const projects = [
     description: "Chương trình đào tạo cho đội ngũ bán hàng của Shinhan Finance về thẻ tín dụng mới để tăng khả năng bán chéo của họ.",
     link: "#"
   },
-  {
-    logo: "/logos/momo.png",
-    background: "/project-backgrounds/momo-bg.png",
-    title: "Giáo dục tài chính cá nhân cho người dùng MoMo",
-    description: "Chương trình giáo dục tài chính thiết kế cho người dùng trong độ tuổi 18-25 của MoMo nhằm nâng cao khả năng tài chính của họ.",
-    link: "#"
-  },
-  {
-    logo: "/logos/gimo.png",
-    background: "/project-backgrounds/gimo-bg.png",
-    title: "Nâng cao hiểu biết tài chính cho người lao động",
-    description: "Chương trình trang bị cho người lao động đang sử dụng GIMO một nền tảng kiến thức tài chính vững chắc để trở thành người dùng trách nhiệm và thông...",
-    link: "#"
-  },
+  // {
+  //   logo: "/logos/momo.png",
+  //   background: "/project-backgrounds/momo-bg.png",
+  //   title: "Giáo dục tài chính cá nhân cho người dùng MoMo",
+  //   description: "Chương trình giáo dục tài chính thiết kế cho người dùng trong độ tuổi 18-25 của MoMo nhằm nâng cao khả năng tài chính của họ.",
+  //   link: "#"
+  // },
+  // {
+  //   logo: "/logos/gimo.png",
+  //   background: "/project-backgrounds/gimo-bg.png",
+  //   title: "Nâng cao hiểu biết tài chính cho người lao động",
+  //   description: "Chương trình trang bị cho người lao động đang sử dụng GIMO một nền tảng kiến thức tài chính vững chắc để trở thành người dùng trách nhiệm và thông...",
+  //   link: "#"
+  // },
   {
     logo: "/logos/fizen.png",
     background: "/project-backgrounds/fizen-bg.png",
